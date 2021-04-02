@@ -2,9 +2,10 @@ import cv2
 import numpy as np
 from matplotlib import pyplot as plt
 
-img = cv2.imread('/Users/juanzapata/MEGA/Downloads/opencv/samples/data/sudoku.png',0)
-#img = cv.imread('/home/juanzapata/OpenCV/samples/data/sudoku.jpg',0)
-#plt.imshow(img)
+img = cv2.imread('images/sudoku.jpg',0)
+#img = cv.imread('images/sudoku.jpg',0)
+plt.imshow(img)
+
 img = cv2.medianBlur(img,5)
 
 ret,th1 = cv2.threshold(img,127,255,cv2.THRESH_BINARY)
