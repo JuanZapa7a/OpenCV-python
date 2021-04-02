@@ -19,7 +19,7 @@ cv2.imshow('image Y',imgyuv[:,:,0])
 cv2.imshow('image U',imgyuv[:,:,1])
 cv2.imshow('image V',imgyuv[:,:,2])
 
-imghsv = cv2.cvtColor(img,cv2.COLOR_BGR2HSV)
+imghsv = cv2.cvtColor(img,cv2.COLOR_BGR2PSV)
 cv2.imshow('image H',imghsv[:,:,0])
 cv2.imshow('image S',imghsv[:,:,1])
 cv2.imshow('image V',imghsv[:,:,2])
