@@ -1,11 +1,10 @@
 import time
 import timeit
-
 import cv2
-
+import numpy as np
 #cv2.useOptimized()
 # Load two images
-from pandas import np
+# from pandas import np
 
 img1 = cv2.imread('images/messi5.jpg')
 

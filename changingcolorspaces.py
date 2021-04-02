@@ -13,7 +13,7 @@ import cv2
 # For HSV, Hue range is [0,179], Saturation range is [0,255] and Value range is [0,255]. Different softwares use different scales. So if you are comparing OpenCV values with them, you need to normalize these ranges.
 
 # Load image
-img = cv2.imread('/Users/juanzapata/opencv/samples/data/messi5.jpg')
+img = cv2.imread('images/messi5.jpg')
 imgyuv = cv2.cvtColor(img,cv2.COLOR_BGR2YUV)
 cv2.imshow('image Y',imgyuv[:,:,0])
 cv2.imshow('image U',imgyuv[:,:,1])
