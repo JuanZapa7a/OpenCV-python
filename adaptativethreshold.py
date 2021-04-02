@@ -1,3 +1,4 @@
+#%%
 import cv2
 import numpy as np
 from matplotlib import pyplot as plt
@@ -6,25 +7,22 @@ img = cv2.imread('images/sudoku.jpg', 0)
 #img = cv.imread('images/sudoku.jpg',0)
 plt.imshow(img)
 
-
-
 img = cv2.medianBlur(img, 5)
 
 ret, th1 = cv2.threshold(img, 127, 255, cv2.THRESH_BINARY)
 # plt.imshow(img,cmap='gray')
 
-# In this, the algorithm calculate the threshold for a small regions of the
-# image. So we get different thresholds for different regions of the same
-# image and it gives us better results for images with varying illumination.
+# In this, the algorithm calculate the threshold for a small regions of the image. 
+# So we get different thresholds for different regions of the same image and it gives 
+# us better results for images with varying illumination.
 # Adaptive Method - It decides how thresholding value is calculated.
-# cv.ADAPTIVE_THRESH_MEAN_C : threshold value is the mean of neighbourhood
-# area. cv.ADAPTIVE_THRESH_GAUSSIAN_C : threshold value is the weighted sum
-# of neighbourhood values where weights are a gaussian window. Block Size -
-# It decides the size of neighbourhood area.
+#         cv.ADAPTIVE_THRESH_MEAN_C : threshold value is the mean of neighbourhood area.
+#         cv.ADAPTIVE_THRESH_GAUSSIAN_C : threshold value is the weighted sum of neighbourhood 
+#            values where weights are a gaussian window.
+# Block Size - It decides the size of neighbourhood area.
 
 
-# C - It is just a constant which is subtracted from the mean or weighted
-# mean calculated.
+# C - It is just a constant which is subtracted from the mean or weighted mean calculated.
 
 th2 = cv2.adaptiveThreshold(
     img, 255, cv2.ADAPTIVE_THRESH_MEAN_C, cv2.THRESH_BINARY, 11, 2)
@@ -43,4 +41,4 @@ for i in range(4):
     plt.title(titles[i])
     plt.xticks([]), plt.yticks([])
 plt.show()
-
+# %%
