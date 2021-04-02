@@ -6,6 +6,8 @@ img = cv2.imread('images/sudoku.jpg', 0)
 #img = cv.imread('images/sudoku.jpg',0)
 plt.imshow(img)
 
+
+
 img = cv2.medianBlur(img, 5)
 
 ret, th1 = cv2.threshold(img, 127, 255, cv2.THRESH_BINARY)
