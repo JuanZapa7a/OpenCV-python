@@ -1,16 +1,15 @@
-#%%
 import cv2
 import numpy as np
 from matplotlib import pyplot as plt
 
 img = cv2.imread('images/sudoku.jpg', 0)
 #img = cv.imread('images/sudoku.jpg',0)
-plt.imshow(img)
+plt.figure(),plt.imshow(img)
 
 img = cv2.medianBlur(img, 5)
 
 ret, th1 = cv2.threshold(img, 127, 255, cv2.THRESH_BINARY)
-# plt.imshow(img,cmap='gray')
+plt.figure(),plt.imshow(img,cmap='gray')
 
 # In this, the algorithm calculate the threshold for a small regions of the image. 
 # So we get different thresholds for different regions of the same image and it gives 
@@ -40,5 +39,4 @@ for i in range(4):
     plt.subplot(2, 2, i+1), plt.imshow(images[i], 'gray')
     plt.title(titles[i])
     plt.xticks([]), plt.yticks([])
-plt.show()
-# %%
+plt.figure(), plt.show()
