@@ -2,7 +2,7 @@ import numpy as np
 import cv2
 import random
 
-im = cv2.imread('messi5.jpg')
+im = cv2.imread('images/messi5.jpg')
 imblur = cv2.GaussianBlur(im,(5,5),0)
 imgray = cv2.cvtColor(imblur,cv2.COLOR_BGR2GRAY)
 ret,thresh = cv2.threshold(imgray,127,255,0)
@@ -27,8 +27,8 @@ _,contours,hierarchy= cv2.findContours(thresh,cv2.RETR_TREE,cv2.CHAIN_APPROX_SIM
 
 cnt = contours[100]
 M = cv2.moments(cnt)
-print M
-print len(contours)
+print (M)
+print (len(contours))
 
 ############
 # FEATURES #
