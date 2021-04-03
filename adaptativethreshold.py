@@ -3,15 +3,10 @@ import numpy as np
 from matplotlib import pyplot as plt
 
 img = cv2.imread('images/sudoku.jpg', 0)
-#img = cv.imread('images/sudoku.jpg',0)
 plt.figure(1)
 plt.imshow(img)
 
 img = cv2.medianBlur(img, 5)
-
-ret, th1 = cv2.threshold(img, 127, 255, cv2.THRESH_BINARY)
-plt.figure(1)
-plt.imshow(th1,cmap='gray')
 
 # In this, the algorithm calculate the threshold for a small regions of the
 # image. So we get different thresholds for different regions of the same
@@ -29,6 +24,8 @@ plt.imshow(th1,cmap='gray')
 
 # C - It is just a constant which is subtracted from the mean or weighted
 # mean calculated.
+
+ret, th1 = cv2.threshold(img, 127, 255, cv2.THRESH_BINARY)
 
 th2 = cv2.adaptiveThreshold(
     img, 255, cv2.ADAPTIVE_THRESH_MEAN_C, cv2.THRESH_BINARY, 11, 2)
