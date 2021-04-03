@@ -1,11 +1,7 @@
 import cv2
-import numpy as np
 from matplotlib import pyplot as plt
 
 img = cv2.imread('images/sudoku.jpg', 0)
-plt.figure(1)
-plt.imshow(img)
-
 img = cv2.medianBlur(img, 5)
 
 # In this, the algorithm calculate the threshold for a small regions of the
