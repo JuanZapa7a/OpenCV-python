@@ -28,7 +28,11 @@ img[grayHarris>0.01*grayHarris.max()]=[0,0,255]
 imgpersp[grayperspHarris>0.01*grayperspHarris.max()]=[0,0,255]
 #cv2.imshow('dst',img)
 plt.imshow(img)
+<<<<<<< HEAD
 plt.show()
+=======
+#plt.show()
+>>>>>>> origin/master
 
 #cv2.imshow('dstpersp',imgpersp)
 plt.imshow(imgpersp)
