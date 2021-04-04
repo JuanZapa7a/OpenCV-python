@@ -7,7 +7,7 @@ import matplotlib.pyplot as plt
 #     family=ffam, style='normal', size=10,
 #     weight='normal', stretch='normal')
 
-img = cv2.imread('dave.jpg')
+img = cv2.imread('images/dave.jpg')
 # converting to gray scale
 gray = cv2.cvtColor(img, cv2.COLOR_BGR2GRAY)
 
@@ -20,13 +20,13 @@ sobely = cv2.Sobel(img,cv2.CV_64F,0,1,ksize=5)
 edges = cv2.Canny(img,100,200)
 
 plt.subplot(2,3,1),plt.imshow(img,cmap = 'gray')
-plt.title('Original'), plt.xticks([]), plt.yticks([])
+plt.title('Original'),plt.xticks([]),plt.yticks([])
 plt.subplot(2,3,2),plt.imshow(laplacian,cmap = 'gray')
-plt.title('Laplacian'), plt.xticks([]), plt.yticks([])
+plt.title('Laplacian'),plt.xticks([]),plt.yticks([])
 plt.subplot(2,3,3),plt.imshow(sobelx,cmap = 'gray')
-plt.title('Sobel X'), plt.xticks([]), plt.yticks([])
+plt.title('Sobel X'),plt.xticks([]),plt.yticks([])
 plt.subplot(2,3,4),plt.imshow(sobely,cmap = 'gray')
-plt.title('Sobel Y'), plt.xticks([]), plt.yticks([])
+plt.title('Sobel Y'),plt.xticks([]),plt.yticks([])
 plt.subplot(2,3,5),plt.imshow(edges,cmap = 'gray')
-plt.title('Canny'), plt.xticks([]), plt.yticks([])
+plt.title('Canny'),plt.xticks([]),plt.yticks([])
 plt.show()

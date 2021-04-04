@@ -1,8 +1,8 @@
 import cv2
 import numpy as np
+import matplotlib.pyplot as plt
 
-
-img = cv2.imread('blox.jpg')
+img = cv2.imread('images/blox.jpg')
 rows,cols,ch = img.shape
 # Making zoom
 pts1 = np.float32([[51,65],[363,53],[28,387],[386,390]])
@@ -26,8 +26,12 @@ grayperspHarris = cv2.dilate(grayperspHarris,None)
 # Threshold for an optimal value, it may vary depending on the image.
 img[grayHarris>0.01*grayHarris.max()]=[0,0,255]
 imgpersp[grayperspHarris>0.01*grayperspHarris.max()]=[0,0,255]
-cv2.imshow('dst',img)
-cv2.imshow('dstpersp',imgpersp)
+#cv2.imshow('dst',img)
+plt.imshow(img)
+#plt.show()
 
+#cv2.imshow('dstpersp',imgpersp)
+plt.imshow(imgpersp)
+plt.show()
 if cv2.waitKey(0) & 0xff == 27:
     cv2.destroyAllWindows()
