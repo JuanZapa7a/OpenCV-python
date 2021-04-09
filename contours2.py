@@ -1,14 +1,15 @@
 import cv2
 import numpy as np
+import matplotlib.pyplot as plt
 
 img = cv2.imread('images/star.jpg')
 img_gray = cv2.cvtColor(img,cv2.COLOR_BGR2GRAY)
 thresh, ret = cv2.threshold(img_gray, 127, 255, 0)
-#contours,hierarchy = cv2.findContours(thresh,2,1)
+contours,hierarchy = cv2.findContours(thresh,2,1)
 
-contours, hierarchy = cv2.findContours(thresh,
-                                       cv2.RETR_CCOMP,
-                                       cv2.CHAIN_APPROX_SIMPLE)
+# #contours, hierarchy = cv2.findContours(thresh,
+#                                        cv2.RETR_CCOMP,
+#                                       cv2.CHAIN_APPROX_SIMPLE)
 cnt = contours[0]
 
 
@@ -50,6 +51,10 @@ ret11 = cv2.matchShapes(cnt,cnt,1,0.0)
 print(ret11)
 
 
-cv2.imshow('img',img)
-cv2.waitKey(0)
-cv2.destroyAllWindows()
+plt.title('Image')
+plt.imshow(img)
+plt.show()
+
+#cv2.imshow('img',img)
+#cv2.waitKey(0)
+#cv2.destroyAllWindows()
