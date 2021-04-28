@@ -40,5 +40,5 @@ for i in range(4):
     plt.subplot(2, 2, i+1), plt.imshow(images[i], 'gray')
     plt.title(titles[i])
     plt.xticks([]), plt.yticks([])
-plt.figure(2)
+
 plt.show()

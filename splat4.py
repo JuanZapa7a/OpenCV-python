@@ -11,7 +11,6 @@ from PIL import Image, ImageEnhance
 import numpy as np
 import matplotlib.pyplot as plt
 
-
 # construct the argument parser and parse the arguments
 ap = argparse.ArgumentParser()
 ap.add_argument("-i", "--image", default="images/M3C102.bmp",
