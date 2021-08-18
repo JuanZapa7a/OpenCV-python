@@ -28,6 +28,12 @@ plt.title('Original Image')
 plt.imshow(img)
 plt.show()
 
+# Cropping
+img = img[0:rows-70,0:cols]
+plt.title('Cropped Image')
+plt.imshow(img)
+plt.show()
+
 # Resizing
 img_res = cv2.resize(
 	img,
@@ -84,11 +90,11 @@ plt.show()
 
 # img_thr = cv2.adaptiveThreshold(
 # 	img_blur, 255, cv2.ADAPTIVE_THRESH_MEAN_C, cv2.THRESH_BINARY, 11, 2)
-# img_thr = cv2.adaptiveThreshold(
-#	img_blur, 255, cv2.ADAPTIVE_THRESH_GAUSSIAN_C,cv2.THRESH_BINARY_INV
-#	|cv2.THRESH_BINARY, 11, 2)
-img_thr = cv2.threshold(img_blur, 0, 255,
-	cv2.THRESH_BINARY_INV | cv2.THRESH_OTSU)[1]
+img_thr = cv2.adaptiveThreshold(
+    img_blur, 255, cv2.ADAPTIVE_THRESH_GAUSSIAN_C,cv2.THRESH_BINARY_INV
+	|cv2.THRESH_BINARY, 11, 2)
+#img_thr = cv2.threshold(img_blur, 0, 255,
+#	cv2.THRESH_BINARY_INV | cv2.THRESH_OTSU)[1]
 
 plt.title('Thresholding Image')
 plt.imshow(img_thr, cmap = 'gray')
