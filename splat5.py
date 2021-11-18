@@ -13,7 +13,7 @@ import matplotlib.pyplot as plt
 
 # construct the argument parser and parse the arguments
 ap = argparse.ArgumentParser()
-ap.add_argument("-i", "--image", default="images/splat1.png",
+ap.add_argument("-i", "--image", default="images/210908 10 H262.tif",
 	help="path to input image")
 ap.add_argument("-c", "--connectivity", type=int, default=8,
 	help="connectivity for connected component analysis")
@@ -89,12 +89,9 @@ plt.show()
 
 
 # img_thr = cv2.adaptiveThreshold(
-# 	img_blur, 255, cv2.ADAPTIVE_THRESH_MEAN_C, cv2.THRESH_BINARY, 11, 2)
-img_thr = cv2.adaptiveThreshold(
-    img_blur, 255, cv2.ADAPTIVE_THRESH_GAUSSIAN_C,cv2.THRESH_BINARY_INV
-	|cv2.THRESH_BINARY, 11, 2)
-#img_thr = cv2.threshold(img_blur, 0, 255,
-#	cv2.THRESH_BINARY_INV | cv2.THRESH_OTSU)[1]
+# img_blur, 255, cv2.ADAPTIVE_THRESH_MEAN_C, cv2.THRESH_BINARY, 11, 2)
+# img_thr = cv2.adaptiveThreshold( img_blur, 128, cv2.ADAPTIVE_THRESH_GAUSSIAN_C,cv2.THRESH_BINARY_INV|cv2.THRESH_BINARY, 11, 2)
+# img_thr = cv2.threshold(img_blur, 0, 255, cv2.THRESH_BINARY_INV | cv2.THRESH_OTSU)[1]
 
 plt.title('Thresholding Image')
 plt.imshow(img_thr, cmap = 'gray')

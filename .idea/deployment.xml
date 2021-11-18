@@ -1,6 +1,22 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
-  <component name="PublishConfigData" autoUpload="Always" serverName="juan@212.128.45.18:22" remoteFilesAllowedToDisappearOnAutoupload="false">
+  <component name="PublishConfigData" autoUpload="Always" serverName="juan@212.128.45.18:22 password" remoteFilesAllowedToDisappearOnAutoupload="false">
+    <serverData>
+      <paths name="juan@212.128.45.18:22 (project level)">
+        <serverdata>
+          <mappings>
+            <mapping deploy="/home/juan/PycharmProjects/PycharmProjectsAorus/OpenCV-python" local="$PROJECT_DIR$" web="/" />
+          </mappings>
+        </serverdata>
+      </paths>
+      <paths name="juan@212.128.45.18:22 password">
+        <serverdata>
+          <mappings>
+            <mapping deploy="/PycharmProjects/PycharmProjectsAorus/OpenCV-python" local="$PROJECT_DIR$" web="/" />
+          </mappings>
+        </serverdata>
+      </paths>
+    </serverData>
     <option name="myAutoUpload" value="ALWAYS" />
   </component>
 </project>
