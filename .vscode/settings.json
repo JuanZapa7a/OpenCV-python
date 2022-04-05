@@ -1,3 +1,4 @@
 {
-    "python.pythonPath": "/home/juan/.virtualenvs/dl4cv/bin/python"
+    "python.pythonPath": "/home/juan/.virtualenvs/dl4cv/bin/python",
+    "jupyter.jupyterServerType": "remote"
 }
