@@ -1,7 +1,7 @@
 
 # https://towardsdatascience.com/image-segmentation-using-pythons-scikit-image-module-533a61ecc980
 
-#
+#%%
 
 import cv2
 import numpy as np
@@ -58,3 +58,5 @@ plt.xticks([]), plt.yticks([])
 # plt.show()
 
 f1.show()
+
+# %%

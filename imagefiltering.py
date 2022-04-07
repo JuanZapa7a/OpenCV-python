@@ -1,12 +1,26 @@
+#%%
 import cv2
 import numpy as np
 from matplotlib import pyplot as plt
 
+from PIL import Image
+import requests
+from io import BytesIO
+
+response = requests.get('https://code.ihub.org.cn/projects/729/repository/revisions/master/entry/samples/data/pic2.png')
+img = Image.open(BytesIO(response.content))
+
+plt.title('Original')
+plt.imshow(img)
+plt.show()
+
 # img = cv2.imread('/Users/juanzapata/opencv/samples/data/sudoku.png',0)
-img = cv2.imread('/home/juanzapata/OpenCV/samples/data/pic2.png',0)
+# img = cv2.imread('/home/juanzapata/OpenCV/samples/data/pic2.png',0)
 # rows,cols,ch = img.shape
 
 # CONVOLUTION
+img = np.array(img)
+img = cv2.cvtColor(img, cv2.COLOR_RGB2BGR)
 kernel = np.ones((5,5),np.float32)/25
 dst= cv2.filter2D(img,-1,kernel)
 
@@ -47,3 +61,5 @@ plt.xticks([]), plt.yticks([])
 plt.subplot(326),plt.imshow(blblur),plt.title('Bilateral Blured Output')
 plt.xticks([]), plt.yticks([])
 plt.show()
+
+# %%
